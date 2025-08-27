@@ -16,7 +16,7 @@
 </head>
 <body class="font-sans">
     <header class="w-full">
-        <nav class="min-h-15 pt-[1rem] pl-[3%] pr-[3%] flex justify-between items-center">
+        <nav class="min-h-15 pt-[1rem] pl-[3%] pr-[3%] flex flex-col md:flex-row justify-between items-center">
             <div id="left" class="flex flex-row ">
                 <div><img src="./logo.png" alt="" class="w-14 h-14" srcset=""></div>
                 <div class="flex items-center text-[#006747] font-bold text-[1.3rem] pl-[1%]">Emergency Service</div>
@@ -67,19 +67,26 @@
                     <p class="font-bold pt-[3px]">জাতীয় জরুরি সেবা</p>
                     <p class="text-[0.7rem] font-light">National Emergency</p>
                     <p class="pt-[8px] font-bold text-[1.2rem]">999</p>
-                    <div class="bg-gray-200 w-[25%] flex justify-center rounded-[10px] font-light text-[15px]">সার্বজনীন</div>
+                    <div class="bg-gray-200 w-[100px] flex justify-center rounded-[10px] font-light text-[15px]">সার্বজনীন</div>
                     <div class="pt-[5%] flex justify-between pb-[5%] md:pb-0">
                         <button type="button" class="copyButton border-1 cursor-pointer border-gray-300 w-[40%] rounded-xl hover:text-white hover:bg-black hover:scale-115"><i class="fa-regular fa-clone pr-[3%]"></i>Copy</button>
-                          <button type="button" class="bg-[#00A63E] hover:scale-115 cursor-pointer text-white w-[40%] rounded-xl"><i class="fa-solid fa-phone-volume pr-[3%]"></i>Call</button>
+                          <button type="button" class="callButton bg-[#00A63E] hover:scale-115 cursor-pointer text-white w-[40%] rounded-xl"><i class="fa-solid fa-phone-volume pr-[3%]"></i>Call</button>
                     </div>
                 </div>
 
                 
 
              </div>
-            <div class="w-full bg-white rounded-2xl md:w-[25%] h-[30rem] mt-[20px] md:mt-0">
-
-            </div>
+            <div id="history" class="w-full bg-white rounded-2xl md:w-[25%] h-[30rem] mt-[20px] md:mt-0">
+              <div class="flex justify-between items-center border-b-2 border-black p-[10px]">
+                <div>Call History</div>
+                <button type="button">Clear</button>
+              </div>
+                <div id="historyContent" class="h-[85%] overflow-y-auto">
+                    <!-- Call history entries will be appended here -->
+                     
+                </div>
+            </div>  
         </div>
     </div>
     <script src="index.js"></script>
