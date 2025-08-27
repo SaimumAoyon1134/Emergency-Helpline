@@ -28,4 +28,23 @@ const newDiv = document.createElement("div");
 newDiv.innerText = "Hello!";
 document.body.append(newDiv);
 ```
+****
+**3.What is Event Bubbling and how does it work?**
+****
+**Answer:**
+
+- Event bubbling is a process in the DOM where an event triggered on a child element first runs its handler, then propagates ("bubbles up") to its parent elements, running their handlers as well.
+- Events move from the innermost element outward to ancestors unless stopped.
+
+**Example:**
+```javascript
+document.getElementById("child").addEventListener("click", () => {
+  alert("Child clicked");
+});
+document.getElementById("parent").addEventListener("click", () => {
+  alert("Parent clicked");
+});
+```
+Clicking the child will trigger both alerts: first "Child clicked", then "Parent clicked".
+
 
