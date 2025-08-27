@@ -14,7 +14,7 @@ for (let button of copyButtons) {
          text=button.parentElement.parentElement.children[3].innerText;
          navigator.clipboard.writeText(text);
          document.getElementById("copyCount").innerText = parseInt(document.getElementById("copyCount").innerText) + 1;
-         alert(text + " copied to clipboard");
+         alert( "নম্বর কপি হয়েছে "+text);
     })}; 
 const callButtons = document.getElementsByClassName("callButton");
 for (let button of callButtons) {
@@ -23,10 +23,10 @@ for (let button of callButtons) {
     button.addEventListener("click",function(e){
         e.preventDefault();
         if(parseInt(document.getElementById("goldCount").innerText)<20){
-            alert("Not enough gold to make a call");
+            alert("❌ আপনার পর্যাপ্ত কয়েন নেই। কল করতে কমপক্ষে ২০ কয়েন থাকতে হবে।");
             return;
         }
-        alert("Calling " + button.parentElement.parentElement.children[1].innerText);
+        alert("📞 Calling " + button.parentElement.parentElement.children[2].innerText+" "+button.parentElement.parentElement.children[3].innerText+"...");
         document.getElementById("goldCount").innerText=parseInt(document.getElementById("goldCount").innerText)-20;
         const historyBox =document.getElementById("historyContent");
         const box=document.createElement("div");
