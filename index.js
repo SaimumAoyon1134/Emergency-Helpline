@@ -51,4 +51,10 @@ for (let button of callButtons) {
         box.appendChild(right);
         historyBox.appendChild(box);
     })
+
 };
+
+document.getElementById("clearButton").addEventListener("click",function(e){
+    e.preventDefault();
+    document.getElementById("historyContent").innerHTML="";
+});
