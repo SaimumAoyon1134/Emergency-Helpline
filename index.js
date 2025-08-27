@@ -18,9 +18,16 @@ for (let button of copyButtons) {
     })}; 
 const callButtons = document.getElementsByClassName("callButton");
 for (let button of callButtons) {
+   
+       
     button.addEventListener("click",function(e){
         e.preventDefault();
+        if(parseInt(document.getElementById("goldCount").innerText)<20){
+            alert("Not enough gold to make a call");
+            return;
+        }
         alert("Calling " + button.parentElement.parentElement.children[1].innerText);
+        document.getElementById("goldCount").innerText=parseInt(document.getElementById("goldCount").innerText)-20;
         const historyBox =document.getElementById("historyContent");
         const box=document.createElement("div");
         box.className=`flex flex-row text-[0.8rem] justify-between items-center  p-[10px] m-[10px] rounded-xl bg-gray-100`;
